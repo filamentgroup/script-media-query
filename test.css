@@ -1,0 +1,9 @@
+body:before {
+	content: "JavaScript is disabled.";
+}
+@media (script), script {
+	body:before {
+		content: "JavaScript is enabled!";
+		color: green;
+	}
+}
