@@ -16,10 +16,12 @@
 
 		// loop through stylesheets
 		for( var i = 0; i < ss.length; i++ ){
-			// loop through style rules
-			for( var j = 0; j < ss[ i ].cssRules.length; j++ ){
+			// loop through style rules.
+			// note: IE needs .rules instead of .cssRules
+			var rulez = ss[ i ].cssRules || ss[ i ].rules;
+			for( var j = 0; j < rulez.length; j++ ){
 				// if it's a media rule, it's a media query. It'll have a "media" property
-				var media = ss[ i ].cssRules[ j ].media;
+				var media = rulez[ j ].media;
 				// if there's a media property and it contains our match, let's replace it!
 				if( media && media.mediaText.match( match ) ){
 					media.mediaText = replace;
