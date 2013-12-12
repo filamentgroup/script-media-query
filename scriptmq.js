@@ -30,4 +30,7 @@
 		}
 	};
 
+	// auto-init
+	w.enableScriptMQs();
+
 }( this ));
