@@ -17,9 +17,9 @@
 		// loop through stylesheets
 		for( var i = 0; i < ss.length; i++ ){
 			// loop through style rules
-			for( var j = 0; j < ss[ i ].rules.length; j++ ){
+			for( var j = 0; j < ss[ i ].cssRules.length; j++ ){
 				// if it's a media rule, it's a media query. It'll have a "media" property
-				var media = ss[ i ].rules[ j ].media;
+				var media = ss[ i ].cssRules[ j ].media;
 				// if there's a media property and it contains our match, let's replace it!
 				if( media && media.mediaText.match( match ) ){
 					media.mediaText = replace;
