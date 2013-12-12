@@ -9,11 +9,11 @@ MIT Licence
 
 	w.enableScriptMQs = function(){
 		// if script mqs already work natively, leave now.
-		if( w.matchMedia( "(script)" ).matches ){
+		if( w.matchMedia && w.matchMedia( "(script)" ).matches ){
 			return;
 		}
 		var ss = document.styleSheets,
-			match = /\s*not all\,\s*script/gmi,
+			match = /\s*not all\,\s*(script|unknown)/gmi,
 			replace = "all";
 
 		for( var i = 0; i < ss.length; i++ ){
