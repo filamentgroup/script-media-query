@@ -1,8 +1,10 @@
-script-media-query
-==================
+# script-media-query
+
+[![Filament Group](http://filamentgroup.com/images/fg-logo-positive-sm-crop.png) ](http://www.filamentgroup.com/)
 
 An @media (script) polyfill experiment
-[c]Scott Jehl, Filament Group, Inc
+
+©2013 Scott Jehl, Filament Group, Inc
 MIT Licence
 
 
